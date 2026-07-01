@@ -15,7 +15,7 @@ import org.testng.Assert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import seleniumFrameworkPractice.pageobjects.LandingPage;
 
-public class StandAloneTest {
+public class StandAloneTest { //Git practice, GitDemo 01.07.2026 New month New day
 
 	public static void main(String[] args) throws InterruptedException { //Before creating a class make sure all the repositories are addeded to pom.xml (dependencies like, maven, testng, webdrivers as well).
 		
@@ -45,7 +45,7 @@ public class StandAloneTest {
 		//wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating")))); //This is for an invisible/blank page. //If you don't get this locator ID in such cases we can directly check with the developers for that id.
 		Thread.sleep(2000);
 		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
-		 
+		Thread.sleep(1000); 
 		List<WebElement> cartProduct = driver.findElements(By.cssSelector(".cartSection h3"));
 	    Boolean match =	cartProduct.stream().anyMatch(cartProducts-> cartProducts.getText().equalsIgnoreCase(productName));
 		Assert.assertTrue(match);

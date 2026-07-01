@@ -18,7 +18,7 @@ import seleniumFrameworkPractice.pageobjects.LandingPage;
 import seleniumFrameworkPractice.pageobjects.ProductCatalogue;
 import seleniumFrameworkPractice.pageobjects.cartPage;
 
-public class SubmitOrderTest {
+public class SubmitOrderTest { //I'm writing to practice Git
 
 	private static FluentWait<WebDriver> wait;
 
@@ -57,7 +57,7 @@ public class SubmitOrderTest {
 		confirmMessage.equalsIgnoreCase("Thankyou for the order."); 
         Assert.assertTrue(confirmMessage.equalsIgnoreCase("Thankyou for the order."));
 		
-       driver.close();
+       driver.quit();
 	}
 
 }
